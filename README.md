@@ -17,7 +17,7 @@ PageStream is a lightweight, high-fidelity simulator for Arduino projects using 
 ## Getting Started
 1. Install SFML.
 2. Run `make`.
-3. Execute `./u8g2_sim`.
+3. Execute `./pagestream`.
 
 ---
 *Created with Gemini CLI.*
