@@ -2,7 +2,8 @@
 #include <U8g2lib.h>
 
 // This macro only affects the simulator, it defines the FPS
-#define SIM_FPS 8 * 15
+
+#define SIM_FPS 8 /* Number of pages*/ * 15 /* Targer FPS */
 
 // This pin maps to the space key in the simulator
 #define PIN_SNAPSHOT 2 
