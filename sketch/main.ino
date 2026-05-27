@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <U8g2lib.h>
 
+// This macro only affects the simulator, it defines the FPS
 #define SIM_FPS 240
 
 // This pin maps to the space key in the simulator
@@ -34,8 +35,10 @@ void setup() {
 void loop() {
     // Report frame rate info every second
     if (millis() - lastMillis >= 1000) {
-        Serial.print("Simulation FrameRate: ");
-        Serial.println(simFrameRate);
+        Serial.print("Simulation Iterations (Page-level): ");
+        Serial.println(SIM_FPS);
+        Serial.print("Full-Draw FrameRate: ");
+        Serial.println(SIM_FPS / 8);
         lastMillis = millis();
     }
 
