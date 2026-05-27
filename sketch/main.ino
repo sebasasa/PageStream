@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include <U8g2lib.h>
 
+#define SIM_FPS 240
+
 // This pin maps to the space key in the simulator
 #define PIN_SNAPSHOT 2 
 
