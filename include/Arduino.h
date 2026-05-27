@@ -18,7 +18,7 @@
 static int _sim_mouseX = 0;
 static int _sim_mouseY = 0;
 static bool _sim_btnSpace = false;
-static int simFrameRate = 60;
+static int _sim_frameRate = 60;
 static sf::Clock _sim_clock;
 
 inline int analogRead(uint8_t pin) {

@@ -23,9 +23,9 @@ void loop();
 #endif
 
 int main() {
-    simFrameRate = SIM_FPS;
+    _sim_frameRate = SIM_FPS;
     sf::RenderWindow window(sf::VideoMode(256, 128), "PageStream - U8g2 Simulator");
-    window.setFramerateLimit(simFrameRate);
+    window.setFramerateLimit(_sim_frameRate);
 
     canvas.create(256, 128);
     canvas.clear(sf::Color::Black);
@@ -46,12 +46,12 @@ int main() {
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::Space) _sim_btnSpace = true;
                 if (event.key.code == sf::Keyboard::Up) {
-                    simFrameRate += 20;
-                    window.setFramerateLimit(simFrameRate);
+                    _sim_frameRate += 20;
+                    window.setFramerateLimit(_sim_frameRate);
                 }
                 if (event.key.code == sf::Keyboard::Down) {
-                    simFrameRate = (simFrameRate > 20) ? simFrameRate - 20 : 20;
-                    window.setFramerateLimit(simFrameRate);
+                    _sim_frameRate = (_sim_frameRate > 20) ? _sim_frameRate - 20 : 20;
+                    window.setFramerateLimit(_sim_frameRate);
                 }
             }
             if (event.type == sf::Event::KeyReleased) {
