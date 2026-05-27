@@ -17,7 +17,13 @@ void loop();
 // Include the Arduino sketch directly
 #include "../sketch/main.ino"
 
+// Allow sketch to override FPS via macro
+#ifndef SIM_FPS
+#define SIM_FPS 60
+#endif
+
 int main() {
+    simFrameRate = SIM_FPS;
     sf::RenderWindow window(sf::VideoMode(256, 128), "PageStream - U8g2 Simulator");
     window.setFramerateLimit(simFrameRate);
 
