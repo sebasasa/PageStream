@@ -1,0 +1,9 @@
+# Executables
+u8g2_sim
+
+# OS Files
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
